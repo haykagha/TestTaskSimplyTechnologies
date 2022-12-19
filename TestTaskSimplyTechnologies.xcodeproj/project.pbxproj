@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00426E2B29501B12002CFA01 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00426E2A29501B12002CFA01 /* MainButton.swift */; };
+		00426E2F295025B4002CFA01 /* DoorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00426E2E295025B4002CFA01 /* DoorsView.swift */; };
 		006AB700294E1AB900BC6B7A /* TestTaskSimplyTechnologiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006AB6FF294E1AB900BC6B7A /* TestTaskSimplyTechnologiesApp.swift */; };
 		006AB704294E1AB900BC6B7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 006AB703294E1AB900BC6B7A /* Assets.xcassets */; };
 		006AB707294E1AB900BC6B7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 006AB706294E1AB900BC6B7A /* Preview Assets.xcassets */; };
@@ -15,9 +17,13 @@
 		006AB717294E1F3200BC6B7A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006AB716294E1F3200BC6B7A /* HomeView.swift */; };
 		006AB719294E1F4000BC6B7A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006AB718294E1F4000BC6B7A /* MainViewModel.swift */; };
 		006AB721294E22C200BC6B7A /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006AB720294E22C200BC6B7A /* EmptyView.swift */; };
+		D6295D56F415783463198B59 /* Pods_TestTaskSimplyTechnologies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD34290EB499D7736E8B0A1 /* Pods_TestTaskSimplyTechnologies.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00426E2A29501B12002CFA01 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		00426E2E295025B4002CFA01 /* DoorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorsView.swift; sourceTree = "<group>"; };
+		00426E3229503A5F002CFA01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		006AB6FC294E1AB900BC6B7A /* TestTaskSimplyTechnologies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTaskSimplyTechnologies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		006AB6FF294E1AB900BC6B7A /* TestTaskSimplyTechnologiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTaskSimplyTechnologiesApp.swift; sourceTree = "<group>"; };
 		006AB703294E1AB900BC6B7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -27,6 +33,9 @@
 		006AB716294E1F3200BC6B7A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		006AB718294E1F4000BC6B7A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		006AB720294E22C200BC6B7A /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		25A822004A58710FA6C2D575 /* Pods-TestTaskSimplyTechnologies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTaskSimplyTechnologies.debug.xcconfig"; path = "Target Support Files/Pods-TestTaskSimplyTechnologies/Pods-TestTaskSimplyTechnologies.debug.xcconfig"; sourceTree = "<group>"; };
+		BA9FAF2F9B32AA5BA4014B15 /* Pods-TestTaskSimplyTechnologies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTaskSimplyTechnologies.release.xcconfig"; path = "Target Support Files/Pods-TestTaskSimplyTechnologies/Pods-TestTaskSimplyTechnologies.release.xcconfig"; sourceTree = "<group>"; };
+		DAD34290EB499D7736E8B0A1 /* Pods_TestTaskSimplyTechnologies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestTaskSimplyTechnologies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6295D56F415783463198B59 /* Pods_TestTaskSimplyTechnologies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00426E2C29501F5D002CFA01 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				006AB720294E22C200BC6B7A /* EmptyView.swift */,
+				00426E2A29501B12002CFA01 /* MainButton.swift */,
+				00426E2E295025B4002CFA01 /* DoorsView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		00426E2D29501F6E002CFA01 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				006AB6FF294E1AB900BC6B7A /* TestTaskSimplyTechnologiesApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		006AB6F3294E1AB800BC6B7A = {
 			isa = PBXGroup;
 			children = (
 				006AB6FE294E1AB900BC6B7A /* TestTaskSimplyTechnologies */,
 				006AB6FD294E1AB900BC6B7A /* Products */,
+				70E8DD47FAAE7FA34A078C74 /* Pods */,
+				323BB14C8043D818C27EB051 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,8 +89,9 @@
 		006AB6FE294E1AB900BC6B7A /* TestTaskSimplyTechnologies */ = {
 			isa = PBXGroup;
 			children = (
-				006AB6FF294E1AB900BC6B7A /* TestTaskSimplyTechnologiesApp.swift */,
-				006AB720294E22C200BC6B7A /* EmptyView.swift */,
+				00426E3229503A5F002CFA01 /* Info.plist */,
+				00426E2D29501F6E002CFA01 /* App */,
+				00426E2C29501F5D002CFA01 /* Shared */,
 				006AB713294E1F0800BC6B7A /* HomeModule */,
 				006AB711294E1D6000BC6B7A /* MainModule */,
 				006AB703294E1AB900BC6B7A /* Assets.xcassets */,
@@ -95,6 +126,23 @@
 			path = HomeModule;
 			sourceTree = "<group>";
 		};
+		323BB14C8043D818C27EB051 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAD34290EB499D7736E8B0A1 /* Pods_TestTaskSimplyTechnologies.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70E8DD47FAAE7FA34A078C74 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25A822004A58710FA6C2D575 /* Pods-TestTaskSimplyTechnologies.debug.xcconfig */,
+				BA9FAF2F9B32AA5BA4014B15 /* Pods-TestTaskSimplyTechnologies.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 006AB70A294E1AB900BC6B7A /* Build configuration list for PBXNativeTarget "TestTaskSimplyTechnologies" */;
 			buildPhases = (
+				D170AFDE307552A33479D5B3 /* [CP] Check Pods Manifest.lock */,
 				006AB6F8294E1AB900BC6B7A /* Sources */,
 				006AB6F9294E1AB900BC6B7A /* Frameworks */,
 				006AB6FA294E1AB900BC6B7A /* Resources */,
+				10E1A445395BFF1E026588AC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,7 +181,7 @@
 				};
 			};
 			buildConfigurationList = 006AB6F7294E1AB800BC6B7A /* Build configuration list for PBXProject "TestTaskSimplyTechnologies" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -160,6 +210,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10E1A445395BFF1E026588AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestTaskSimplyTechnologies/Pods-TestTaskSimplyTechnologies-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestTaskSimplyTechnologies/Pods-TestTaskSimplyTechnologies-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestTaskSimplyTechnologies/Pods-TestTaskSimplyTechnologies-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D170AFDE307552A33479D5B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestTaskSimplyTechnologies-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		006AB6F8294E1AB900BC6B7A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -167,7 +259,9 @@
 			files = (
 				006AB719294E1F4000BC6B7A /* MainViewModel.swift in Sources */,
 				006AB700294E1AB900BC6B7A /* TestTaskSimplyTechnologiesApp.swift in Sources */,
+				00426E2B29501B12002CFA01 /* MainButton.swift in Sources */,
 				006AB717294E1F3200BC6B7A /* HomeView.swift in Sources */,
+				00426E2F295025B4002CFA01 /* DoorsView.swift in Sources */,
 				006AB715294E1F2500BC6B7A /* HomeViewModel.swift in Sources */,
 				006AB721294E22C200BC6B7A /* EmptyView.swift in Sources */,
 				006AB710294E1C6600BC6B7A /* MainView.swift in Sources */,
@@ -293,6 +387,7 @@
 		};
 		006AB70B294E1AB900BC6B7A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25A822004A58710FA6C2D575 /* Pods-TestTaskSimplyTechnologies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,9 +397,9 @@
 				DEVELOPMENT_TEAM = R4Q36FBQXG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestTaskSimplyTechnologies/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,6 +417,7 @@
 		};
 		006AB70C294E1AB900BC6B7A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA9FAF2F9B32AA5BA4014B15 /* Pods-TestTaskSimplyTechnologies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -331,9 +427,9 @@
 				DEVELOPMENT_TEAM = R4Q36FBQXG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestTaskSimplyTechnologies/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

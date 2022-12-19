@@ -17,7 +17,7 @@ struct MainView: View {
             ForEach(viewModel.tabs) { tab in
                 switch tab {
                     case .home:
-                        HomeView()
+                        HomeView(viewModel: HomeViewModel())
                             .tabItem {
                                 Label(tab.title, systemImage: tab.imageName)
                             }

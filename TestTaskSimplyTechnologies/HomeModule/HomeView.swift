@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    @ObservedObject var viewModel: HomeViewModel
+    @State var doorsViewstate: DoorsView.State = .initial
 
     var body: some View {
         GeometryReader { metrics in
@@ -23,7 +25,7 @@ struct HomeView: View {
                             .frame(height: metrics.size.height * 0.2)
                         Spacer()
                     }
-                    VStack(spacing: 5) {
+                    VStack(spacing: 0) {
                         HStack {
                             Button(action: {
                                 print("Refresh pressed")
@@ -34,7 +36,7 @@ struct HomeView: View {
                             Text("Updated 1min ago")
                                 .bold()
                                 .foregroundColor(Color(UIColor.gray))
-                        }
+                        }.padding()
                         ScrollView(.horizontal) {
                             HStack {
                                 Image("QX50 SPORT")
@@ -50,11 +52,25 @@ struct HomeView: View {
                                     .aspectRatio(contentMode: .fit)
                                     .background(.clear)
                             }
-                            .frame(height:  0.45 * metrics.size.height)
+                            .frame(height:  0.4 * metrics.size.height)
                         }
-                        Text("- - -+")
+                        HStack {
+                            ForEach(viewModel.sections) { section in
+                                VStack(alignment: .leading) {
+                                    Text(section.title)
+                                        .font(.system(size: 18, weight: .bold))
+                                    sectionView(section: section, state: doorsViewstate)
+                                        .padding(10)
+                                        .frame(width: (metrics.size.width - 20) / 2, height: 100)
+                                        .background(Color.white)
+                                        .cornerRadius(10)
+
+                                }
+                            }
+                        }
+                        .padding(10)
                         Spacer()
-                    }.padding()
+                    }
                 }
                 .background(Color(UIColor.systemGray5))
                 .toolbarBackground(.visible, for: .navigationBar)
@@ -77,10 +93,39 @@ struct HomeView: View {
             }
         }
     }
+
+    @ViewBuilder
+    private func sectionView(section: Section, state: DoorsView.State) -> some View {
+        GeometryReader { metrics in
+            switch section {
+                case .door:
+                    switch state {
+                        case .initial:
+                            DoorsView(lockState: .initial, unlockState: .initial) {
+                                doorsViewstate = .loading
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+                                    doorsViewstate = .selected
+                                }
+                            }
+                        case .loading:
+                            DoorsView(lockState: .loading, unlockState: .highlighted) {
+                                doorsViewstate = .selected
+                            }
+                        case .selected:
+                            DoorsView(lockState: .selected, unlockState: .initial, action: nil)
+                    }
+                case .engine:
+                    HStack {
+                        MainButton(type: .start, state: .initial)
+                        MainButton(type: .stop, state: .initial)
+                    }
+            }
+        }
+    }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(viewModel: HomeViewModel())
     }
 }
